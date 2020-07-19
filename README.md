@@ -11,6 +11,7 @@ This README would normally document whatever steps are necessary to get your app
 ### How do I get set up? ###
 
 * AWS hosted git repo for php
+* local git setup
 * Configuration
 * Dependencies
 
