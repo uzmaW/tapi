@@ -1,0 +1,36 @@
+{
+    "name": "torre/api",
+    "description": "Torre api",
+    "keywords": [
+        "torre",
+        "package"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "uzma",
+            "email": "author_email@example.com",
+            "homepage": "http://author-website.example.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : ">=7.0",
+        "phpseclib/phpseclib": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Torre\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Torre\\Api\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
