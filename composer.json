@@ -1,0 +1,35 @@
+{
+  "name": "torre/site",
+  "description": "Torre site",
+  "keywords": [
+    "torre",
+    "package"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "uzma",
+      "email": "author_email@example.com",
+      "homepage": "http://author-website.example.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "phpseclib/phpseclib": "^2.0",
+    "torre/api": "^1.0@dev"
+
+  },
+  "repositories": [
+    {
+      "type":"path",
+      "url": "torre/api"
+    }
+  ],
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  },
+  "minimum-stability": "dev"
+}
