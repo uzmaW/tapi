@@ -77,8 +77,8 @@ Class Service
         $result = curl_exec($ch);
         $header = curl_getinfo($ch);
         $error = curl_error($ch);
-
-        //echo json_encode($status, JSON_PRETTY_PRINT);
+if(isset($_REQUEST['debug']))
+        echo json_encode($header, JSON_PRETTY_PRINT);
 
         curl_close($ch);
 
