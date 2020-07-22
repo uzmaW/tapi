@@ -83,9 +83,9 @@ $total_jobs =0;
 
 
                     <?php
+                    $total_jobs = count($jobs);
+                    if($total_jobs) {
 
-                    if(is_array($jobs)) {
-                        $total_jobs = count($jobs);
                         foreach (@$jobs as $job) {
                             /*        foreach($job["members"] as $member ) {
                                     {
@@ -148,8 +148,12 @@ $total_jobs =0;
                 </div>
                             <?php
                         }
-                    }
-                    ?>
+                    } else { ?>
+                <div class="p-4 md:p-12 text-center lg:text-left">
+                    no job listing found
+                </div>
+                <?php
+                    }?>
 
             </div>
 			<div class="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between">
