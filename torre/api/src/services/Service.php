@@ -93,7 +93,7 @@ Class Service
     }
     public function toArray() {
 
-        return json_decode($this->data,true);
+        return json_decode($this->data,true,51);
     }
 
 }

@@ -1,5 +1,5 @@
 <?php
-$total_jobs =0;
+$total_jobs = (int) count(@$jobs);
 ?>
 
 
@@ -83,7 +83,7 @@ $total_jobs =0;
 
 
                     <?php
-                    $total_jobs = count($jobs);
+
                     if($total_jobs) {
 
                         foreach (@$jobs as $job) {
