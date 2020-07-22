@@ -77,13 +77,17 @@ Class Service
         $result = curl_exec($ch);
         $header = curl_getinfo($ch);
         $error = curl_error($ch);
-if(isset($_REQUEST['debug']))
-        echo json_encode($header, JSON_PRETTY_PRINT);
+
 
         curl_close($ch);
 
 
         $this->data  =substr($result, $header['header_size']);
+        if(isset($_REQUEST['debug'])){
+            echo json_encode($header, JSON_PRETTY_PRINT);
+            echo @$this->data['results'];
+        }
+
 
         return $this->toArray();
     }
