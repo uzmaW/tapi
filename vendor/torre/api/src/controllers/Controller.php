@@ -20,19 +20,7 @@ class Controller {
         $this->service = $service;
 	}
 
-	public function _payLoad() {
-
-	}
-
-	public function _getItemDetailJson()
-	{
-
-	}
 
 
-	public function _callTorreApi($action)
-	{
-
-	}
 
 }

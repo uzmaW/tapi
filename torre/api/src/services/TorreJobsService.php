@@ -16,7 +16,7 @@ class TorreJobsService extends Service {
     ];
 
     public $request;
-
+    public $response;
     public function __construct($request=[])
     {
         $this->request = $request;
@@ -24,7 +24,8 @@ class TorreJobsService extends Service {
 
     public function getResults() {
 
-        $this->setCurlParams()->getJsonData();
+        return $this->setCurlParams()->getJsonData();
+
     }
 
     public function setCurlParams() {
@@ -62,24 +63,17 @@ class TorreJobsService extends Service {
         ];
 
 
-         $this->oParams = $oParams;
-
-
-
-
-
-           $this->urlFields = $this->build_query();
-
-            $this->postFields = $keyToSearch;
-            $this->url = Constants::$API_SEARCH_URL;
-            $this->method= 'POST';
+        $this->oParams = $oParams;
+        $this->urlFields = $this->build_query();
+        $this->postFields = $keyToSearch;
+        $this->url = Constants::$API_SEARCH_URL;
+        $this->method= 'POST';
 
 
         return $this;
     }
     public function build_query() {
         $oParams = $this->oParams;
-        $params='';
         $var = [];
         foreach( $oParams as $key=>$val) {
             $var[] = "$key=$val";;

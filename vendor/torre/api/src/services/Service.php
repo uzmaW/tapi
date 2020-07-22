@@ -12,6 +12,7 @@ Class Service
     public $urlFields = '';
     public $method = 'GET';
     public $service ;
+    public $data;
     public static function getInstance() {
         return new static();
     }
@@ -34,7 +35,7 @@ Class Service
         curl_setopt($ch, CURLOPT_HEADER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $configArray);
         curl_setopt($ch, CURLOPT_NOBODY, true);
-        //curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
        // curl_setopt($ch, CURLOPT_REFERER, $url);
         switch ($method) {
             case "POST":
@@ -82,8 +83,13 @@ Class Service
         curl_close($ch);
 
 
-        $output = substr($result, $header['header_size']);
-        return $output;
+        $this->data  =substr($result, $header['header_size']);
+
+        return $this->toArray();
+    }
+    public function toArray() {
+
+        return json_decode($this->data,true);
     }
 
 }
