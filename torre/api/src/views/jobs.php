@@ -81,6 +81,7 @@
 
 
                     <?php
+                    $total_jobs =0;
                     if(is_array($jobs)) {
                         $total_jobs = count($jobs);
                         foreach (@$jobs as $job) {
