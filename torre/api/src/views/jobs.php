@@ -118,7 +118,7 @@ $total_jobs = (int) count(@$jobs);
 
                             <div class="flex  flex-col w-full h-auto capitalize text-gray-600 dark:text-gray-400">
                                 <span>name</span> <span class="mt-2  text-black dark:text-gray-200">
-                                    <img class="h-12 w-12 rounded-full object-cover" src="<?php echo $job["organizations"]["picture"];?>" alt=""><?php  echo $job["organizations"]["name"];/*$member["name"]*/;?></span>
+                                    <img class="h-12 w-12 rounded-full object-cover" src="<?php echo @$job["organizations"][0]["picture"];?>" alt=""><?php  echo @$job["organizations"][0]["name"];/*$member["name"]*/;?></span>
                             </div>
                         </div>
                         <div class="w-1/4  ">
