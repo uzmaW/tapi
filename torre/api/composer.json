@@ -21,7 +21,9 @@
         "psr-4": {
             "Torre\\": "src/",
             "Torre\\Service\\": "src/services/",
-            "Torre\\Views\\": "src/views/"
+            "Torre\\Views\\": "src/views/",
+            "Torre\\Controllers\\": "src/controllers/",
+            "Torre\\Factory\\": "src/factory/"
         }
     },
     "autoload-dev": {
