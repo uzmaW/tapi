@@ -32,8 +32,8 @@ class TorreJobsService extends Service {
         /* generate keyword criteria*/
         $keyToSearch = [];
         $qKeyToSearch = [];
-
-        if(!is_array($this->request['q']))  $this->request['q'] = array($this->request['q']);
+        $this->request['q'] = isset($this->request['q'])?:['q'=>''];
+        if(!is_array($this->request['q']) )  $this->request['q'] = array($this->request['q']);
 
         foreach ($this->request['q'] as $keyword) {
 
