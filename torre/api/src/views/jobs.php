@@ -62,7 +62,7 @@ $total_jobs = (int) count(@$jobs);
                 <div class="pb-2 flex items-center justify-between text-gray-600 dark:text-gray-400 border-b dark:border-gray-600">
                     <div>
             <span>
-                <span class="text-green-500 dark:text-green-200"><?php echo $total_jobs;?></span>
+                <span class="text-green-500 dark:text-white-200"><?php echo $total_jobs;?> Jobs found</span>
 			</span>
                        <!-- <div class="flex">
                             <a href="users-dashboard/" class="py-2 block text-green-500 border-green-500 dark:text-green-200
